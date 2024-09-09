@@ -1,0 +1,23 @@
+
+#footer{
+    min-height: 108px;
+    background: #9A8DEC;
+    padding: 2vw 10vw 2vw;
+  }
+  #footer-left{
+    max-width: 587px;
+  }
+  #footer-text{
+    max-width: 527px;
+    color: #C8CDDC;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    size: 16px;
+    line-height: 21.6px;
+  }
+  #footer-right{
+    font-family: "Inter", sans-serif;
+    line-height: 21.6px;
+    size: 16px;
+    font-weight: 700;
+  }
