@@ -12,8 +12,8 @@ export default function Carasol() {
       <div className="carousel-inner">
         <div className="carousel-item active">
           <div className="image-container">
-            <img src="/img/farmer1.jpeg" className="blurred-background" alt="Slide 1"/>
-            <img src="/img/farmer1.jpeg" className="d-block w-100 full-image" alt="Slide 1"/>
+            <img src="/img/image2.jpeg" className="blurred-background" alt="Slide 1"/>
+            <img src="/img/image2.jpeg" className="d-block w-100 full-image" alt="Slide 1"/>
           </div>
           <div className="carousel-caption d-none d-md-block">
             <h5>First slide label</h5>
@@ -22,8 +22,8 @@ export default function Carasol() {
         </div>
         <div className="carousel-item">
           <div className="image-container">
-            <img src="public/img/DiseaseDiagnosis.jpeg" className="blurred-background" alt="Slide 2"/>
-            <img src="public/img/DiseaseDiagnosis.jpeg" className="d-block w-100 full-image" alt="Slide 2"/>
+            <img src="public/img/image3.jpeg" className="blurred-background" alt="Slide 2"/>
+            <img src="public/img/image3.jpeg" className="d-block w-100 full-image" alt="Slide 2"/>
           </div>
           <div className="carousel-caption d-none d-md-block">
             <h5>Second slide label</h5>
@@ -32,8 +32,8 @@ export default function Carasol() {
         </div>
         <div className="carousel-item">
           <div className="image-container">
-            <img src="/img/CommunitySupport.jpeg" className="blurred-background" alt="Slide 3"/>
-            <img src="/img/CommunitySupport.jpeg" className="d-block w-100 full-image" alt="Slide 3"/>
+            <img src="/img/image1.jpeg" className="blurred-background" alt="Slide 3"/>
+            <img src="/img/image1.jpeg" className="d-block w-100 full-image" alt="Slide 3"/>
           </div>
           <div className="carousel-caption d-none d-md-block">
             <h5>Third slide label</h5>

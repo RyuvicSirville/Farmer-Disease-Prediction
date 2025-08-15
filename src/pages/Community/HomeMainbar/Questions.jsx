@@ -29,7 +29,7 @@ const Questions = (props) => {
         <p>votes</p>
       </div>
       <div className="display-votes-ans">
-        <p>3</p>
+        <p>2</p>
         <p>answers</p>
       </div>
       <div className="display-question-details">
@@ -48,7 +48,7 @@ const Questions = (props) => {
             
             
             
-            navigate("/questionDetails");
+            navigate("/questionDetails/" + qid);
           }}
         >
           {propQuesTitle}

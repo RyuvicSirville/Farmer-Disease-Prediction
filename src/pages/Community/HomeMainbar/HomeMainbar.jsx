@@ -32,7 +32,7 @@ const HomeMainbar = () => {
       <div>
 
         <>
-          <p>2 questions</p>
+          <br></br>
           <QuestionList />
         </>
 

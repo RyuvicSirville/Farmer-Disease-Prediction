@@ -84,9 +84,6 @@ const CommunityASk = () => {
             onClick={() => {
 
               function callback2(data) {
-                //console.log(data.courses)
-                
-                //console.log(data.courses[0].id)
               }
               function callback1(res) {
                 res.json().then(callback2)
@@ -97,11 +94,12 @@ const CommunityASk = () => {
                   "Content-Type": "application/json",  // Set Content-Type header
                 },
                 body: JSON.stringify({
-                  username: "Boy",
+                  username: "Ramesh Yadav",
                   quesTitle: questionTitle,
                   quesBody: questionBody,
                   tags: questionTags,
-                  askedOn: "today"
+                  askedOn: "today",
+                  votes:0
                 })
 
               }).then(callback1)

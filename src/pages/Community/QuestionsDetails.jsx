@@ -1,6 +1,6 @@
-import {useEffect , useState} from "react";
+import { useEffect, useState } from "react";
 
-
+import { useParams, useNavigate } from "react-router-dom";
 import upvote from "/assets/sort-up.svg";
 import downvote from "/assets/sort-down.svg";
 import "./Questions.css";
@@ -9,11 +9,12 @@ import DisplayAnswer from "./DisplayAnswer";
 import { returnElem } from "./HomeMainbar/Questions";
 import Header from "../../componets/Header";
 const QuestionsDetails = () => {
-
-  var qid = returnElem().qid;
+  const navigate = useNavigate();
+  let { qid } = useParams();
+  //var qid = returnElem().qid;
   const [Answer, setAnswer] = useState("");
-  const [quesTitle , setQuestionTitle]= useState("")
-  const[allData,setAllData] = useState([])
+  const [quesTitle, setQuestionTitle] = useState("")
+  const [allData, setAllData] = useState([])
 
   const [quesBody, setQuestionBody] = useState("");
   const [quesTags, setQuestionTags] = useState([]);
@@ -23,15 +24,15 @@ const QuestionsDetails = () => {
   const [answers, setAnswers] = useState([]);
   console.log(qid)
   if (qid === undefined || qid === null) {
-    qid="1725199326846"
+    qid = "1725199326846"
     console.log("HIHIHIH")
     setQuestionTitle("")
     setAllData([])
-}
-else{
-  try {
-    useEffect(()=> {
-      function callback2(data){
+  }
+  else {
+    try {
+      useEffect(() => {
+        function callback2(data) {
           //console.log(data.courses)
           setAllData(data.data)
           setQuestionTitle(data.data.ques.quesTitle)
@@ -43,38 +44,39 @@ else{
           setAnswers(data.data.ans)
           console.log(answers)
           console.log(allData)
-      }
-      function callback1(res){
+        }
+        function callback1(res) {
           res.json().then(callback2)
-      }
-      fetch("http://localhost:8001/user/ques/"+  qid,{
-          method:"GET",
-          
-      }).then(callback1)
-        
-  },[]);
-  } catch (error ) {
-    
-  }
-  
-}
+        }
+        fetch("http://localhost:8001/user/ques/" + qid, {
+          method: "GET",
 
- 
+        }).then(callback1)
+
+      }, []);
+    } catch (error) {
+
+    }
+
+  }
+
+
 
 
   return (
     <div >
-       <Header></Header>  
+      <Header></Header>
       <div className="question-details-page pr-4" >
-       
+
         <>
 
           <div key="hello">
             <section className="question-details-container">
-              
-              <h1>{returnElem().quesTitle}</h1>
+
+              <h1 className="text-2xl">{quesTitle}</h1>
+              <br></br>
               <div className="grid grid-cols-8 gap-4 ">
-                
+
                 <div className="question-votes col-start-1 col-end-2 justify-self-center">
                   <img
                     src={upvote}
@@ -93,10 +95,10 @@ else{
                   />
                 </div>
                 <div style={{ width: "100%" }} className="col-start-2 col-span-7">
-                  <p className="question-body">{quesBody }</p>
+                  <p className="question-body">{quesBody}</p>
                   <div className="question-details-tags">
 
-                    <p key="hello">hello2</p>
+                    <p key="hello">{quesTags}</p>
 
                   </div>
                   <div className="question-actions-user">
@@ -111,7 +113,7 @@ else{
 
                     </div>
                     <div>
-                      <p>asked on { askedOn}</p>
+                      <p>asked on {askedOn}</p>
                       <div
 
                         className="user-link"
@@ -134,11 +136,11 @@ else{
             </section>
 
             <section>
-              
+
               <h3>1 Answers</h3>
               {answers.map(ans => {
-            return<DisplayAnswer  ans={ans}/>
-        })}
+                return <DisplayAnswer ans={ans} />
+              })}
 
               <DisplayAnswer
 
@@ -160,9 +162,32 @@ else{
                 ></textarea>
                 <br />
                 <input
+
                   type="submit"
                   className="post-ans-btn"
                   value="Post Your Answer"
+                  onClick={() => {
+                    function callback2(data) {
+                    }
+                    function callback1(res) {
+                      res.json().then(callback2)
+                    }
+                    fetch("http://localhost:8001/user/ansPost  ", {
+                      method: "POST",
+                      headers: {
+                        "Content-Type": "application/json",  
+                      },
+                      body: JSON.stringify({
+                        username: "Samir Bhuyan",
+                        qid:qid,
+                        ansBody: Answer,
+                        askedOn: "today",
+                      })
+
+                    }).then(callback1)
+                    
+
+                  }}
                 />
               </form>
               <p>

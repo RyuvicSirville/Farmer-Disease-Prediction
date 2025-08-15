@@ -8,6 +8,9 @@ import ChatInterface from './pages/ChatInterface'
 import HomeMainbar from './pages/Community/HomeMainbar/HomeMainbar'
 import CommunityASk from './pages/Community/CommunityASk'
 import QuestionsDetails from './pages/Community/QuestionsDetails'
+import Loginsighup from './pages/Login/Loginsighup';
+import About from './pages/About';
+import ComplaintRegister from './pages/ComplaintRegister';
 function App() {
   
 
@@ -21,7 +24,10 @@ function App() {
               <Route path={"/community"} element={<HomeMainbar />} />
               <Route path={"/askQuestion"} element={<CommunityASk />} />
               <Route path={"/chat"} element={<ChatInterface />} />
-              <Route path={"/questionDetails"} element={<QuestionsDetails />} />
+              <Route path={"/login"} element={<Loginsighup />} />
+              <Route path={"/about"} element={<About />} />
+              <Route path={"/complaint"} element={<ComplaintRegister />} />
+              <Route path={"/questionDetails/:qid"} element={<QuestionsDetails />} />
               
             </Routes>
           </Router>

@@ -3,7 +3,7 @@ import frame1 from '/img/CommunitySupport.jpeg'
 import frame2 from '/img/DiseaseDiagnosis.jpeg'
 import frame3 from '/img/RegisterComplaint.jpeg'
 export function Events() {
-    //const navigate = useNavigate()
+    const navigate = useNavigate()
     return (
         <div >
             <div class="     ">
@@ -27,9 +27,9 @@ export function Events() {
             </div>
 
             <div class="max-w-[1500px] mx-auto grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 gap-20 px-[20px]">
-                <button class="justify-self-center" onClick={() => {  }}><img class="hover:scale-110 place-self-center" src={frame1}></img></button>
-                <button class="justify-self-center" onClick={() => {  }}><img class="hover:scale-110 place-self-center" src={frame2}></img></button>
-                <button class="justify-self-center md-col-span-2" onClick={() => {  }}><img class="hover:scale-110 place-self-center" src={frame3}></img></button>
+                <button class="justify-self-center" onClick={() => { navigate("/community") }}><img class="hover:scale-110 place-self-center" src={frame1}></img></button>
+                <button class="justify-self-center" onClick={() => { navigate("/chat") }}><img class="hover:scale-110 place-self-center" src={frame2}></img></button>
+                <button class="justify-self-center md-col-span-2" onClick={() => { navigate("/complaint") }}><img class="hover:scale-110 place-self-center" src={frame3}></img></button>
                 <div class="py-10"></div>
             </div>
             <div >
