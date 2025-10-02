@@ -77,7 +77,7 @@ Farmer-Disease-Prediction/
 
 ### 1. AI Disease Diagnosis Chatbot
 
-- Users can upload an image or describe symptoms via the chat interface ([`src/pages/ChatInterface.jsx`](src/pages/ChatInterface.jsx)).
+- Users describe symptoms via the chat interface ([`src/pages/ChatInterface.jsx`](src/pages/ChatInterface.jsx)).
 - The frontend sends the data to the backend endpoint `/ai/prob`.
 - The backend ([`server/Gpt.js`](server/Gpt.js)) uses Groq LLM to generate a structured JSON diagnosis and treatment plan.
 - The response is parsed and displayed step-by-step in the chat.
