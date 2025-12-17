@@ -1,6 +1,6 @@
 # Farmer Disease Prediction Portal
 
-AArogyam is a full-stack web application designed to empower farmers with AI-powered disease diagnosis for plants and animals, a vibrant community Q&A forum, and a streamlined complaint registration system. Built with React, Vite, Tailwind CSS, Node.js, Express, MongoDB, and Groq LLM API.
+This is a full-stack web application designed to empower farmers with AI-powered disease diagnosis for plants and animals, a vibrant community Q&A forum, and a streamlined complaint registration system. Built with React, Vite, Tailwind CSS, Node.js, Express, MongoDB, and Groq LLM API.
 
 ---
 
@@ -166,7 +166,7 @@ GROQ_API_KEY=your_groq_api_key
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
